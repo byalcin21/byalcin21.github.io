@@ -1,0 +1,64 @@
+html {
+    background: rgb(0, 11, 56);
+}
+#preload {
+  display: none;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 600;
+ 
+}
+
+.pace.pace-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+.pace .pace-progress {
+  display: block;
+  position: fixed;
+  z-index: 600;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 20px;
+  background: #21ffe2;
+
+  pointer-events: none;
+}
+
+.pace .pace-progress:after {
+  visibility: hidden;
+}
+
+.pace .pace-progress.special:after {
+  display: block;
+  position: absolute;
+  visibility: visible;
+  top: 5%;
+  right: 5%;
+  content: attr(data-progress-text);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  font-size: 10vw;
+  line-height: 1;
+  text-align: right;
+  color: #fff;
+}
